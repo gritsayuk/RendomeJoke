@@ -10,5 +10,12 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
+  doRefresh(refresher){
+    //alert("refresh!");
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
 
+  }
 }
