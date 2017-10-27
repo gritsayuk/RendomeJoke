@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule} from '@angular/http';
+import { RestapiServiceProvider } from '../providers/restapi-service/restapi-service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpModule} from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestapiServiceProvider
   ]
 })
 export class AppModule {}

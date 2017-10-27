@@ -8,8 +8,8 @@
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  <h2>Про Олега</h2>
+  <h2>{{JokeBody.id}}</h2>
   <p>
-    Олег был настолько пьян, что его пальто было застегнуто на яйцо, торчащее из ширинки.
+    {{JokeBody.text}}
   </p>
 </ion-content>
