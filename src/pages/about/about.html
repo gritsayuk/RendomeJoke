@@ -1,11 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Добавить
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-input  type="text" placeholder="Тема" [(ngModel)]="Title"></ion-input>
+  <ion-textarea [(ngModel)]="TextJoke" placeholder="Введите шутку" rows="5"></ion-textarea>
+  <button ion-button (click)="SendJoke()">Добавить</button>
+  <p>{{Response}}</p>
 </ion-content>
