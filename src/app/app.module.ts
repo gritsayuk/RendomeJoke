@@ -38,6 +38,7 @@ import { RestapiServiceProvider } from '../providers/restapi-service/restapi-ser
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestapiServiceProvider,
     RestapiServiceProvider
   ]
 })

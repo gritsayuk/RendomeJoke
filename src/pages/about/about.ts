@@ -18,7 +18,7 @@ export class AboutPage {
   SendJoke(){
     this.restapiService.runHttpPost(this.apiUrl,{"id":this.Title,"text":this.TextJoke})
       .then((result) => {
-        this.JokeBody = JSON.parse(result._body);
+        this.JokeBody = JSON.parse(result["_body"]);
         this.TextJoke="";
         this.Title="";
         this.Response=this.JokeBody.message;

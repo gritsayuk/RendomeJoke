@@ -21,11 +21,11 @@ export class HomePage {
   SendRequest(req){
     this.restapiService.runHttpPost(this.apiUrl,req)
       .then((result) => {
-        this.JokeBody = JSON.parse(result._body);
-        //console.log(JSON.parse(result._body).text);
+        //console.log("result:"+result);
+        this.JokeBody = JSON.parse(result["_body"]);
 
       }, (err) => {
-        //console.log(err);
+        console.log(err);
       });
   }
 }
