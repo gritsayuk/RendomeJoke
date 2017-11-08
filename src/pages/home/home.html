@@ -8,8 +8,17 @@
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  <h2>{{JokeNumId}}</h2>
+  <!--h2>{{JokeNumId}}</h2-->
   <p>
     {{JokeNumName}}
   </p>
+  <div>
+    <button  class = 'ButoonNav' ion-button icon-only color = 'light' disabled = {{PreDisable}}  (click)="ClickButtonPre()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <button  class = 'ButoonNav' ion-button icon-only color = 'light' disabled = {{NextDisable}} (click)="ClickButtonNext()">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </div>
+
 </ion-content>
